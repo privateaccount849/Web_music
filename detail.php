@@ -70,7 +70,7 @@ img.d-block {
   
 }
     </style>
-    <title>Document</title>
+    <title>Play Music</title>
 </head>
 <body>
     <?php 
@@ -85,10 +85,10 @@ img.d-block {
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="index.php"> Home <span class="glyphicon glyphicon-home sr-only">(current)</span></a>
+                            <a class="nav-link" href="index.php"> Home <span class="glyphicon glyphicon-home sr-only"></span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.php"> <span class="glyphicon glyphicon-user"></span>Stream</a>
+                            <a class="nav-link" href="about.php"> <span class="glyphicon glyphicon-user"></span>About</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link" href="#" id="navbarDropdown">
@@ -102,11 +102,10 @@ img.d-block {
                                 <?php if(isset($_SESSION['UserName'])) echo "<a class='dropdown-item' href='admin/admin.php'>Admin</a>" 
                                 ?>
                                 <?php if(isset($_SESSION['UserName'])) echo"<a class='dropdown-item' href='dangxuat.php' id='navbarDropdown'>
-                                Log Out</a>"  ?>
+                                Exit</a>"  ?>
         
                             </div>
                         </li>
-
                     </ul>
                     
                     <form class="form-inline my-2 my-lg-0" method="get" action="search.php" enctype="multipart/form-data">
@@ -132,7 +131,7 @@ img.d-block {
 
     <div class="col-md-6" style=" text-align: left;">
         <h2 class="name-pro">Name Of Music: <?php echo $song['SongName'] ?></h2>
-        <p style="color: red;padding-left: 20px;"> Price: <?php echo $song['SongPrice']." $"; ?></p>
+        <p style="color: Blue;padding-left: 20px;"> Price: <?php echo $song['SongPrice']." $"; ?></p>
 
         <form method="POST" action="cart.php"> 
           <input type="number" name="sl" value="1" min="1" max="1" style="display: none;"> 
@@ -140,20 +139,19 @@ img.d-block {
           <button type="submit" name="button-buy" class="btn btn-outline-danger">Add to cart</button>
         </form>
 
-        
           <audio controls controlsList="nodownload" ontimeupdate="myAudio(this)" style="width: 250px">
           <source src="song/<?php echo $song['Mp3'] ?>" type="audio/mpeg">
           </audio>
           <script type="text/javascript">
             function myAudio(event){
-              if(event.currentTime > 45){
+              if(event.currentTime > 25){
                 event.currentTime=0;
                 event.pause();
                 alert ("Buy to continue listening!")
               }
             }
           </script>
-             
+
         <div style="border-bottom: 1px solid black"></div>
         <p>
           Basic song info:
@@ -165,11 +163,8 @@ img.d-block {
         <div class="col-md-5">
           <img src="image/<?php echo $song['SongImg']?>" style="width: 600px;height: 500px" >
         </div>
-        
-
-    
-        </div>
     </div>
+</div>
 
     <footer>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -184,13 +179,5 @@ img.d-block {
             </div>
             </nav>
     </footer>
-    
 </body>
 </html>
-
-
-
-
-
-        
-    

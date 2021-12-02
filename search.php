@@ -86,7 +86,7 @@ img.d-block {
                             <a class="nav-link" href="index.php"> Home <span class="glyphicon glyphicon-home sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.php"> <span class="glyphicon glyphicon-user"></span>ABOUT</a>
+                            <a class="nav-link" href="about.php"> <span class="glyphicon glyphicon-user"></span>About</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link" href="#" id="navbarDropdown">
@@ -121,15 +121,15 @@ img.d-block {
               <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
               <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img  class="d-block" src="image/denvau1.jpg" alt="First slide">
+            <div class="carousel-inner cc">
+              <div class="carousel-item active cc">
+                <img  class="d-block im" src="image/9.png" alt="First slide">
               </div>
-              <div class="carousel-item">
-                <img class="d-block" src="image/b6.jpeg" alt="Second slide">
+              <div class="carousel-item im">
+                <img class="d-block" src="image/8.png" alt="Second slide">s
               </div>
-              <div class="carousel-item">
-                <img class="d-block" src="image/b7.jpeg" alt="Third slide">
+              <div class="carousel-item im">
+                <img class="d-block" src="image/b3.jpeg" alt="Third slide">
               </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -144,59 +144,45 @@ img.d-block {
           <!-- 2 -->
           <div class="container">
             <div class="row mt-5">
-                <h2 class="list-product-title">New product</h2>
-                <div class="list-product-subtitle">
-                    <p>List product description</p>
-                </div>
+                <h2 class="list-product-title">Search Results</h2>
 
-    <?php 
-                            include("connect.php");
-                            $searchName = $_GET['searchName'];
-                            $sql = " select * from song where SongName like ('%$searchName%') ";
-                            $result = mysqli_query($connect, $sql);
-                            while($row_pro =  mysqli_fetch_array($result)){
-                                $SongID =$row_pro['SongID'];
-                                $SongName =$row_pro['SongName'];
-                                $SongPrice =$row_pro['SongPrice'];
-                                $GenresID =$row_pro['GenresID'];
-                                $SongImg =$row_pro['SongImg'];
-                                echo "
-                                      <div class='col-md-3 col-sm-6 col-12'>
-                    <div class='card card-product mb-3'>
-                    <div id='song'>
-                    <h1 style='font-size: 23px'>$SongName</h1>
-                    <img src='image/$SongImg' width='250' height='250' alt='Hinh Anh'/>
-                    <p style='color: red'><b>Price: $SongPrice </b>$</p>
-                    <div align='center'>
-                    <a href='detail.php?id=$SongID'><button class='btn btn-dark'>Details</button></a>
-                    <a href=''><button class='btn btn-dark'>Add to cart</button></a>
-                    </div>
-                    </div>
-                    </div>
-                    </div>
-                                     ";     
-                            }
-                        
-                    ?>
-
-
-     </div>
-                </div>
+                <?php 
+                    include("connect.php");
+                    $searchName = $_GET['searchName'];
+                    $sql = " select * from song where SongName like ('%$searchName%') ";
+                    $result = mysqli_query($connect, $sql);
+                    while($row_pro =  mysqli_fetch_array($result)){
+                        $SongID =$row_pro['SongID'];
+                        $SongName =$row_pro['SongName'];
+                        $SongPrice =$row_pro['SongPrice'];
+                        $GenresID =$row_pro['GenresID'];
+                        $SongImg =$row_pro['SongImg'];
+                        echo "
+                        <div class='col-md-3 col-sm-6 col-12'>
+                        <div class='card card-product mb-3'>
+                        <div id='song'>
+                        <h1 style='font-size: 23px'>$SongName</h1>
+                        <img src='image/$SongImg' width='250' height='250' alt='Hinh Anh'/>
+                        <p style='color: red'><b>Price: $SongPrice </b>$</p>
+                        <div align='center'>
+                        <a href='detail.php?id=$SongID'><button class='btn btn-dark'>Details</button></a>
+                        <a href=''><button class='btn btn-dark'>Add to cart</button></a>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        ";}
+                        ?>
             </div>
         </div>
-        <script src="/Vendors/css/style.css"></script>
-        <script src="/Vendors/js/jquery-3.3.1.min.js"></script>
     </section>
-
-
-
 <footer>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="index.php"> Sound Clownz <span class="glyphicon glyphicon-home sr-only">(current)</span></a>
+                            <a class="nav-link" href="index.php"> Code Music <span class="glyphicon glyphicon-home sr-only"></span></a>
                         </li>
                     </ul>
                 </div>

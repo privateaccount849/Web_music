@@ -86,7 +86,7 @@ img.d-block {
                             <a class="nav-link" href="index.php"> Home <span class="glyphicon glyphicon-home sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.php"> <span class="glyphicon glyphicon-user"></span>Stream</a>
+                            <a class="nav-link" href="about.php"> <span class="glyphicon glyphicon-user"></span>About</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link" href="#" id="navbarDropdown">
@@ -167,12 +167,11 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
       $tong += $item['sl'] * $item['SongPrice'];
      endforeach;
      ?>
-    
+     </div>
 
-  </div>  
-  <div class="container" style="border-top:3px solid #38D276;margin-top: 20px">
-  <div class="col-md-6" style="border: 1px solid #38D276">
-<h3 style="text-align: center;">Payment</h3>
+     <div class="container" style="border-top:3px solid #38D276;margin-top: 20px">
+        <div class="col-md-6" style="border: 1px solid #38D276">
+            <h3 style="text-align: center;">Payment</h3>
   <form method="POST" action="thanhtoan.php" class="was-validated">
     <div class="form-group">
       <label for="usr">UserName:</label>
@@ -184,52 +183,25 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
     <option value="Vietcombank">Vietcombank</option>
     <option value="Techcombank">Techcombank</option>
     <option value="Airpay">Airpay</option>
-    <option value="momo">momo</option>
+    <option value="momo">Momo</option>
   </select>
 <div class="form-group">
   <div class="form-group">
   <label for="usr">Order date:</label>
   <input type="text" class="form-control" id="usr" name="date" value="<?php
   date_default_timezone_set('Asia/Ho_Chi_Minh');
-echo "". date("Y.m.d h:i:sa");
-?>" readonly>
+echo "". date("d-m-Y h:i:s a");
+?>"readonly>
 </div>
 <div class="form-group">
   <label for="usr">Total</label>
   <input type="text" class="form-control" id="usr" value=" <?php echo number_format($tong) ." $" ?>" readonly name="total">
 </div>
 <input type="submit" class="btn btn-success" value="Pay">
-
   </form>
-  </div>
 </div>
- </div>
- </div>
-
-    
-
-
-
-    <footer>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.php"> Sound Clownz <span class="glyphicon glyphicon-home sr-only">(current)</span></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            </nav>
-    </footer>
-    
+</div>
+</div>
+</div>
 </body>
 </html>
-
-
-
-
-
-        
-    

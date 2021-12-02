@@ -126,18 +126,13 @@ img.d-block {
                             </div>
                         </li>
                         <li class="nav-item dropdown" >
-                            <a class="nav-link" href="../../dangxuat.php" id="navbarDropdown">
-                                Log Out
-                            </a>
+                            <a class="nav-link" href="../../dangxuat.php" id="navbarDropdown">Exit</a>
                         </li>
                     </ul>
                 </div>
             </div>
           </nav>
     </header>
-
-
-
    <div class="example">
         <div class="container">
             <div class="row">
@@ -156,44 +151,39 @@ img.d-block {
                             <th colspan="2">Action</th>
                         </tr>
                 </thead>
-
-
-                 <?php
-        include("../../connect.php");
-        $sql = "select * from song";
-        $result = mysqli_query($connect,$sql);
-        while($song=mysqli_fetch_array($result)){
-            $SongID = $song['SongID'];
-            $SongName = $song['SongName'];
-            $SongPrice = $song['SongPrice'];
-            $SongImg = $song['SongImg'];
-            $Mp3 = $song['Mp3'];
-            $SongDes = $song['SongDes'];
-            $SingerID = $song['SingerID'];
-            $GenresID = $song['GenresID'];
-            echo "
-            
-            <tr style='text-decoration: none'>
-               <td>$SongID</td>
-               <td>$SongName</td>
-               <td>$SongPrice</td>
-               <td><img src='../../image/$SongImg' width='150' height='150' alt='Hinh Anh'/></td>
-               <td>$Mp3</td>
-               <td>$SongDes</td>
-               <td>$SingerID</td>
-               <td>$GenresID</td>
-               <td><a href='edit_song.php?SongID=$SongID' class='btn btn-outline-secondary'>Delete</a></td>
-               <td><a href='edit_song.php?SongID=$SongID' class='btn btn-outline-secondary'>Update</a></td>
-            </tr>
-            ";
-        }
-        ?>
+                <?php
+                include("../../connect.php");
+                $sql = "select * from song";
+                $result = mysqli_query($connect,$sql);
+                while($song=mysqli_fetch_array($result)){
+                    $SongID = $song['SongID'];
+                    $SongName = $song['SongName'];
+                    $SongPrice = $song['SongPrice'];
+                    $SongImg = $song['SongImg'];
+                    $Mp3 = $song['Mp3'];
+                    $SongDes = $song['SongDes'];
+                    $SingerID = $song['SingerID'];
+                    $GenresID = $song['GenresID'];
+                    echo "
+                    <tr style='text-decoration: none'>
+                    <td>$SongID</td>
+                    <td>$SongName</td>
+                    <td>$SongPrice</td>
+                    <td><img src='../../image/$SongImg' width='150' height='150' alt='Hinh Anh'/></td>
+                    <td>$Mp3</td>
+                    <td>$SongDes</td>
+                    <td>$SingerID</td>
+                    <td>$GenresID</td>
+                    <td><a href='edit_song.php?SongID=$SongID' class='btn btn-outline-secondary'>Delete</a></td>
+                    <td><a href='edit_song.php?SongID=$SongID' class='btn btn-outline-secondary'>Update</a></td>
+                    </tr>
+                    ";
+                }
+                ?>
     
                 </table>
             </div>
-        </div>
-         
+        </div>   
     </div>
-
    </body>
-   </html>
+</html>

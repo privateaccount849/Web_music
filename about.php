@@ -88,7 +88,7 @@ img.d-block {
             
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img  class="d-block" src="image/b9.jpeg" alt="First slide">
+                <img  class="d-block" src="image/8.png" alt="First slide">
                 <div class="carousel-caption d-none d-md-block">
                    <p>Hotline: 0988.410.926</p>
                    <p>Email: longntbhaf190233@fpt.edu.vn</p>

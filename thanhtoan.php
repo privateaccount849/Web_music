@@ -88,7 +88,7 @@ img.d-block {
                             <a class="nav-link" href="index.php"> Home <span class="glyphicon glyphicon-home sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.php"> <span class="glyphicon glyphicon-user"></span>Stream</a>
+                            <a class="nav-link" href="about.php"> <span class="glyphicon glyphicon-user"></span>About</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link" href="#" id="navbarDropdown">
@@ -117,7 +117,7 @@ img.d-block {
 
     </div>
 
-    <h3 style="text-align: center;">Congratulations on your payment and you can now download it</h3>
+    <h3 style="text-align: center;">Congratulations you paid and now you can download!!!</h3>
  <?php 
  require_once("connect.php");
   if($_SERVER['REQUEST_METHOD']=='POST'){
@@ -128,7 +128,7 @@ img.d-block {
   
   $sql="INSERT INTO orders (Total,OderDate,UserNameC,Bank) VALUES ('$total','$date','$usn','$bank')";
 if(mysqli_query($connect,$sql)){
-  echo "thanh toan thanh cong";
+  echo "Payment success";
 }
 else{
   echo "Error: ".mysqli_errno($connect);

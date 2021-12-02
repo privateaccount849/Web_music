@@ -14,12 +14,11 @@
     <link rel="stylesheet" href="../Demowebsite(1)/Vendors/css/grid.css">
     <link rel="stylesheet" type="text/css" href="/Vendors/css/style.css">
 	<link rel="stylesheet" type="text/css" href="/Resources/bootstrap-5.0.0-beta3-dist/css/bootstrap.min.css">
-
     <style>
-        *{
+    *{
 	margin: 0;
 	padding: 0;
-}
+    }
 
 body{
     background-image: url(https://image4.uhdpaper.com/wallpaper/mountain-scenery-landscape-sunset-uhdpaper.com-4K-4.3289.jpg);
@@ -78,7 +77,7 @@ img.d-block {
   
 }
     </style>
-    <title>CD | Nghe tải nhạc chất lượng cao</title>
+    <title>CM | Nghe tải nhạc chất lượng cao</title>
 </head>
 <body>
    <?php 
@@ -93,15 +92,13 @@ img.d-block {
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="index.php"> Home <span class="glyphicon glyphicon-home sr-only">(current)</span></a>
+                            <a class="nav-link" href="index.php"> Home <span class="glyphicon glyphicon-home sr-only"></span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.php"> <span class="glyphicon glyphicon-user"></span>Contact</a>
+                            <a class="nav-link" href="about.php"> <span class="glyphicon glyphicon-user"></span>About</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link" href="#" id="navbarDropdown">
-                                Account
-                            </a>
+                            <a class="nav-link" href="#" id="navbarDropdown">Account</a>
                             <div class="dropdown-content">
                                 <?php if(!isset($_SESSION['UserName'])) echo "<a class='dropdown-item' href='login.php'>Sign In</a>"
                                ?>
@@ -132,13 +129,13 @@ img.d-block {
             </ol>
             <div class="carousel-inner cc">
               <div class="carousel-item active cc">
-                <img  class="d-block im" src="image/denvau5.jpg" alt="First slide">
+                <img  class="d-block im" src="image/9.png" alt="First slide">
               </div>
               <div class="carousel-item im">
-                <img class="d-block" src="image/denvau2.jpg" alt="Second slide">s
+                <img class="d-block" src="image/8.png" alt="Second slide">s
               </div>
               <div class="carousel-item im">
-                <img class="d-block" src="image/denvau3.jpg" alt="Third slide">
+                <img class="d-block" src="image/b3.jpeg" alt="Third slide">
               </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -201,7 +198,7 @@ img.d-block {
                 <div class="collapse navbar-collapse" id="navbarSupportedContent" >
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="index.php"> CODE MUSIC <span class="glyphicon glyphicon-home sr-only">(current)</span></a>
+                            <a class="nav-link" href="index.php"> CODE MUSIC <span class="glyphicon glyphicon-home sr-only"></span></a>
                         </li>
                     </ul>
                 </div>

@@ -165,9 +165,7 @@ img.d-block {
                             $SingerID=$song['SingerID'];
                             $GenresID=$song['GenresID'];
                             $SongImg =$song['SongImg'];
-                            $Mp3 =$song['Mp3'];                            
-                           
-                            
+                            $Mp3 =$song['Mp3'];
                         }
                     }
                     echo "
@@ -203,8 +201,6 @@ img.d-block {
                         </tr>
                     ";
                 ?>
-        
-        
         <tr>
         <td><input type="submit" class="btn btn-outline-success" name="add" value="Add Song"></td>
         <td><input type="submit" class="btn btn-outline-success" name="edit" value="Edit Song"></td>
@@ -215,7 +211,6 @@ img.d-block {
     <?php
     include("../../connect.php");
     if (isset($_POST['add'])) {
-
 
         $SongID =$_POST['SongID'];
         $SongName =$_POST['SongName'];
@@ -241,14 +236,11 @@ img.d-block {
             echo "<script>alert('Song has been added successfull!')</script>";
             echo "<script>window.open('view_song.php','_self')</script>";
         }
-    else{
+        else{
         echo"<script>alert('Error')</script>";
+        }
     }
-    }
-    
-    
     //ff//
-    
     if(isset($_POST['edit'])){
                 $SongID =$_POST['SongID'];
                 $SongName =$_POST['SongName'];
@@ -256,7 +248,7 @@ img.d-block {
                 $SongDes=$_POST['SongDes'];
                 $SingerID=$_POST['SingerID'];
                 $GenresID=$_POST['GenresID'];
-
+                
         //image//
         $file = $_FILES['SongImg']['name'];
         $file_tmp = $_FILES['SongImg']['tmp_name'];
@@ -281,8 +273,6 @@ img.d-block {
                     echo "<script>alert('Error')</script>";
                 }
             }
-        
-        
         
         if(isset($_POST['delete'])){
                 $SongID = $_POST['SongID'];

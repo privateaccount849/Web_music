@@ -116,9 +116,7 @@ img.d-block {
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link" href="#" id="navbarDropdown">
-                                Users 
-                            </a>
+                            <a class="nav-link" href="#" id="navbarDropdown">Users</a>
                             <div class="dropdown-content">
                                 <a class="dropdown-item" href="User/edit_user.php">Edit Users</a>
                                 <a class="dropdown-item" href="User/view_user.php">Users Management</a>
@@ -126,11 +124,8 @@ img.d-block {
                             </div>
                         </li>
                         <li class="nav-item dropdown" >
-                            <a class="nav-link" href="../dangxuat.php" id="navbarDropdown">
-                                Log Out
-                            </a>
+                            <a class="nav-link" href="../dangxuat.php" id="navbarDropdown">Exit</a>
                         </li>
-
                     </ul>
                 </div>
             </div>
@@ -145,13 +140,13 @@ img.d-block {
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img  class="d-block" src="../image/b7.jpeg" alt="First slide">
+                <img  class="d-block" src="../image/9.png" alt="First slide">
               </div>
               <div class="carousel-item">
-                <img class="d-block" src="../image/b4.jpeg" alt="Second slide">
+                <img class="d-block" src="../image/8.png" alt="Second slide">
               </div>
               <div class="carousel-item">
-                <img class="d-block" src="../image/b9.jpeg" alt="Third slide">
+                <img class="d-block" src="../image/b3.jpeg" alt="Third slide">
               </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
